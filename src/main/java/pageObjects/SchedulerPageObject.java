@@ -37,7 +37,12 @@ public class SchedulerPageObject extends ApplicationMenuPageObject{
     }
 
     public void selectPrivateRadioButton() {
-        waitForElementClickable(driver, SchedulerPageUI.PRIVATE_RADIO_BUTTON);
-        checkTheCheckBoxOrRadio(driver,SchedulerPageUI.PRIVATE_RADIO_BUTTON);
+        waitForElementVisible(driver, SchedulerPageUI.PRIVATE_RADIO_BUTTON);
+        checkTheCheckBoxOrRadio(driver, SchedulerPageUI.PRIVATE_RADIO_BUTTON);
+    }
+
+    public void clickOnAllDayButton() {
+        waitForElementClickable(driver, SchedulerPageUI.ALL_DAY_BUTTON);
+        clickToElement(driver, SchedulerPageUI.ALL_DAY_BUTTON);
     }
 }
