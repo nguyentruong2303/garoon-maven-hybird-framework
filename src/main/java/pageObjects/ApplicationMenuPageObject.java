@@ -14,7 +14,7 @@ public class ApplicationMenuPageObject extends BaseElement {
     WebDriver driver;
 
     public void openDynamicApplicationMenu(String application) {
-        waitForElementClickable(driver, ApplicationMenuPageUI.DYNAMIC_APPLICATION_MENU);
+        waitForElementClickable(driver, ApplicationMenuPageUI.DYNAMIC_APPLICATION_MENU, application);
         clickToElement(driver, ApplicationMenuPageUI.DYNAMIC_APPLICATION_MENU, application);
     }
 }

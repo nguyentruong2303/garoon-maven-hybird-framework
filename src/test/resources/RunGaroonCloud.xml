@@ -6,26 +6,24 @@
         <listener class-name='reportConfig.ExtentTestListener' />
     </listeners>
 
-    <test name="Run on chrome">
-        <parameter name='browser' value='chrome' />
+<!--    <test name="Run on chrome">-->
+<!--        <parameter name='browser' value='chrome' />-->
+<!--        <classes>-->
+<!--            <class name="com.garoon.scheduler.AddRegularAppointment" />-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Run on firefox">-->
+<!--        <parameter name='browser' value='firefox' />-->
+<!--        <classes>-->
+<!--            <class name="com.garoon.scheduler.AddRegularAppointment" />-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="Run on edge">
+        <parameter name='browser' value='edge' />
         <classes>
             <class name="com.garoon.scheduler.AddRegularAppointment" />
         </classes>
     </test>
-
-    <!--		<test name="Run on firefox">-->
-    <!--			<parameter name='browser' value='firefox' />-->
-    <!--			<classes>-->
-    <!--				<class name="com.nopcommerce.account.Level_18_Extent_V5" />-->
-    <!--			</classes>-->
-    <!--		</test> -->
-    <!--		-->
-    <!--		<test name="Run on edge">-->
-    <!--			<parameter name='browser' value='edge' />-->
-    <!--			<classes>-->
-    <!--				<class name="com.nopcommerce.account.Level_18_Extent_V5" />-->
-    <!--			</classes>-->
-    <!--		</test> -->
 
 
 </suite>

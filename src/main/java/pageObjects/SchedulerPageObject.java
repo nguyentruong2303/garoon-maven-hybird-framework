@@ -22,6 +22,7 @@ public class SchedulerPageObject extends ApplicationMenuPageObject{
     public void removeUserInAttendeesList() {
         waitForElementClickable(driver, SchedulerPageUI.SELECT_ALL_LINK);
         clickToElement(driver, SchedulerPageUI.SELECT_ALL_LINK);
+        waitForElementClickable(driver, SchedulerPageUI.REMOVE_BUTTON);
         clickToElement(driver, SchedulerPageUI.REMOVE_BUTTON);
     }
 

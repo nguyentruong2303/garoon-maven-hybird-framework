@@ -11,7 +11,7 @@ public class BaseElement extends BasePage{
     WebDriver driver;
 
     public void selectDateTimeDropDown(String dateTime, String valueDropdown) {
-        waitForElementVisible(driver, BaseElementUI.DYNAMIC_SELECT_DATE_TIME_DROPDOWN);
+        waitForElementVisible(driver, BaseElementUI.DYNAMIC_SELECT_DATE_TIME_DROPDOWN,dateTime);
         selectItemInDropdown(driver, BaseElementUI.DYNAMIC_SELECT_DATE_TIME_DROPDOWN,valueDropdown,dateTime);
     }
 

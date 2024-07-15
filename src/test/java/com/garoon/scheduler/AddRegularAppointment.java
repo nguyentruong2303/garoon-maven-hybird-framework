@@ -48,7 +48,7 @@ public class AddRegularAppointment extends BaseTest {
         servicesPage.clickToGaroonServices();
         subject = "Appointment 1";
         homePage = PageGeneratorManager.getHomePage(driver);
-        homePage.openDynamicApplicationMenu("Scheduler");
+        homePage.openDynamicApplicationMenu("schedule");
         schedulerPage = PageGeneratorManager.getSchedulerPage(driver);
         schedulerPage.clickToNewAppointmentLink();
     }
@@ -82,6 +82,7 @@ public class AddRegularAppointment extends BaseTest {
     public void TC_03_Add_Appointment_With_No_Attendees(Method method) {
         ExtentTestManager.startTest(method.getName() + " Run on " + this.browserName.toUpperCase() , "Add Appointment with no attendees");
         ExtentTestManager.getTest().log(Status.INFO, "Add Appointment - Step 01: Remove all user in attendees");
+        schedulerPage.selectDateTimeDropDown("start_hour","10");
         schedulerPage.removeUserInAttendeesList();
 
         schedulerPage.clickToAddButton();
@@ -98,7 +99,7 @@ public class AddRegularAppointment extends BaseTest {
 
         ExtentTestManager.getTest().log(Status.INFO, "Add Appointment - Step 02: Verify subject appointment");
         Assert.assertEquals(schedulerPage.getSubjectAppointmentDetail(),subject);
-        schedulerPage.openDynamicApplicationMenu("Scheduler");
+        schedulerPage.openDynamicApplicationMenu("schedule");
         schedulerPage.clickToNewAppointmentLink();
     }
 
@@ -110,7 +111,7 @@ public class AddRegularAppointment extends BaseTest {
         schedulerPage.clickToAddButton();
 
         Assert.assertEquals(schedulerPage.getSubjectAppointmentDetail(),"--");
-        schedulerPage.openDynamicApplicationMenu("Scheduler");
+        schedulerPage.openDynamicApplicationMenu("schedule");
         schedulerPage.clickToNewAppointmentLink();
     }
 
@@ -125,7 +126,7 @@ public class AddRegularAppointment extends BaseTest {
         schedulerPage.selectPrivateRadioButton();
         schedulerPage.clickToAddButton();
         Assert.assertEquals(schedulerPage.getSubjectAppointmentDetail(),subject+" (Private)");
-        schedulerPage.openDynamicApplicationMenu("Scheduler");
+        schedulerPage.openDynamicApplicationMenu("schedule");
         schedulerPage.clickToNewAppointmentLink();
     }
 
